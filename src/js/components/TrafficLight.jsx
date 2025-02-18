@@ -5,7 +5,7 @@ const TrafficLight = () => {
     const [activeColor, setActiveColor] = useState("green");
     const [colors, setColors] = useState(["red", "yellow", "green"])
 
-    const setColorHandler = (e) => {
+    const setActiveColorHandler = (e) => {
         setActiveColor(e.target.classList.value.split(' ')[1])
     };
 
@@ -20,11 +20,11 @@ const TrafficLight = () => {
         <div className="container">
             <div id="semaforo" className="semaforo mx-auto">
                 {colors.map((color)=>(
-                    <div key={color} onClick={setColorHandler} className={`light ${color} ${activeColor === color ? 'active' : ''}`}></div>    
+                    <div key={color} onClick={setActiveColorHandler} className={`light ${color} ${activeColor === color ? 'active' : ''}`}></div>    
                 ))}
 
             </div>
-            <div className="btn btn-primary mx-auto " onClick={() => setActiveColor(colors[Math.floor(Math.random() * colors.length)])}>Change color</div>
+            <div className="btn btn-primary mx-auto my-3 " onClick={() => setActiveColor(colors[Math.floor(Math.random() * colors.length)])}>Change color</div>
             <div className="btn btn-success mx-2" onClick={addPurpleHandler}>Add Purple</div>
         </div>
 
