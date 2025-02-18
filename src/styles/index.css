@@ -9,3 +9,40 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.semaforo {
+    width: 100px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.light {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.active{
+    box-shadow: 0 0 40px 5px rgba(255, 255, 255, 122);
+}
+
+.btn-success{
+    background-color: purple;
+    border-color: purple;
+}
